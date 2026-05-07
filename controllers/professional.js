@@ -1,5 +1,4 @@
-const professionalRoute = (req, res) => {
-  res.send({
+const data = {
     professionalName: 'Emily',
     firstName: 'Emily',
     nameLink: 'www.linkedin.com/in/emily',
@@ -15,9 +14,8 @@ const professionalRoute = (req, res) => {
       text: 'GitHub',
       link: 'www.github.com/emily',
     },
-  });
-};
+  }
 
-module.exports = {
-  professionalRoute,
-};
+exports.getData = (req, res) => {
+    res.status(200).json(data);
+}
